@@ -1,4 +1,5 @@
 # BRUTE FORCE APPROACH
+
 """
 def findDivisors():
 
@@ -18,36 +19,29 @@ def findDivisors():
 
 print(findDivisors())
 """
-# 
+
 # https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
 import math  
   
-# Method to print the divisors 
-def printDivisors() :
+
+def findDivisors() :
     userInput = int(input("Please enter a number: "))
     divisors = []
     below = []
-    check = range(1, int(math.sqrt(userInput) + 1))
+    check = range(1, int(math.sqrt(userInput) + 1)) # (inclusive, exclusive)
     for number in check: 
           
         if (userInput % number == 0) : 
-
             if (userInput / number == number) : 
-
                 divisors.append(number)
             else : 
-
                 below.append(number)
-                divisors.append(int(userInput / number)) 
-                  
+                divisors.append(int(userInput / number))   
 
-    for number in below + divisors[::-1] : 
-        print (number, end=" ") 
+    return below + divisors
           
-
-print ("The divisors of 100 are: ") 
-printDivisors() 
+print(printDivisors()) 
 
   
 
