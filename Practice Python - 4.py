@@ -21,6 +21,7 @@ print(findDivisors())
 """
 
 # https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+# https://math.stackexchange.com/questions/1039519/finding-prime-factors-by-taking-the-square-root/1039525
 
 import math  
   
@@ -41,7 +42,7 @@ def findDivisors() :
 
     return below + divisors
           
-print(printDivisors()) 
+print(findDivisors()) 
 
   
 
