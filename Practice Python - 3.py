@@ -11,7 +11,8 @@ for number in a:
 print(belowFive)
 """
 
+inputNumber = int(input("Please enter a number: ")) 
 
 a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
-belowFive = list(filter(lambda x: x < 5, a))
+belowFive = list(filter(lambda x: x < inputNumber, a))
 print(belowFive)
