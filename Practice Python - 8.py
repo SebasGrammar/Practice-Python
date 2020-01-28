@@ -1,8 +1,29 @@
-a = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+import random
 
-b = [number for number in a if number % 2 == 0]
+rules = {"rock": "scissors", "scissors": "paper", "paper": "rock"}
+choices = ["rock", "paper", "scissors"]
 
-c = list(filter(lambda x: x % 2 == 0, a))
+#rock = "rock"
+#print(rules)
+#print(rules["rock"])
+#print(rules[rock])
 
-print(b, c)
+def RPS():
+    
+    CPU = choices[random.randint(0,2)]
+    user = input("What is your choice?: ").lower()
 
+    if (rules[CPU] == user):
+        print("Computer wins!")
+    elif (CPU == user):
+        print("It's a tie.")
+    else:
+        print("User wins!!")
+        
+    print(CPU, user)
+
+playOn = "yes"
+
+while playOn == "yes":
+    RPS()
+    playOn = input("type 'no' if you want to keep playing: ")
