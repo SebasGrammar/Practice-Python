@@ -30,11 +30,11 @@ def guessNumber():
     #if (guess == number):
     #    print("You guessed the number!")
     while (guess != number):
-        guess = int(input("Try again: "))
-        if (guess - 4 > number or guess + 4 < number):
+        if (guess - 5 > number or guess + 5 < number):
             print("You are cold")
         else:
             print("You are hot")
+        guess = int(input("Try again: "))
 
     print("You guessed the number!")
 
