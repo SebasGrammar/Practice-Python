@@ -24,6 +24,6 @@ def RPS():
 
 playOn = "yes"
 
-while playOn == "yes":
+while playOn != "no":
     RPS()
-    playOn = input("type 'no' if you want to keep playing: ")
+    playOn = input("type 'no' if you want to stop playing: ")
